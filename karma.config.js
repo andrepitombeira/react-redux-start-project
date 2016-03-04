@@ -1,4 +1,4 @@
-var webpackConfig = require('./webpack.config');
+var path = require('path');
 
 module.exports = function (config) {
   config.set({
@@ -8,13 +8,37 @@ module.exports = function (config) {
     files: [
       'tests.webpack.js'
     ],
+
     preprocessors: {
       'tests.webpack.js': ['webpack', 'sourcemap']
     },
-    reporters: ['mocha', 'osx'],
-    webpack: webpackConfig,
+    reporters: ['mocha', 'osx', 'coverage'],
+    webpack: {
+      module: {
+        preLoaders: [
+          {
+            test: /\.js$/,
+            exclude: [
+              path.resolve('src/'),
+              path.resolve('node_modules/'),
+              /.[sS]pec\.js$/
+            ],
+            loader: 'babel'
+          },
+          {
+            test: /\.js$/,
+            include: path.resolve('src/'),
+            loader: 'isparta'
+          }
+        ]
+      }
+    },
     webpackServer: {
       noInfo: true
+    },
+    coverageReporter: {
+      type: 'html',
+      dir: 'coverage/'
     }
   });
 };

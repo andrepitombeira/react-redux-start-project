@@ -4,6 +4,14 @@ module.exports = {
     path: __dirname,
     filename: 'dist/bundle.js'
   },
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['', '.js', '.scss'],
+    modulesDirectories: [
+      'node_modules',
+      'src'
+    ]
+  },
   module: {
     preLoaders: [
       {
