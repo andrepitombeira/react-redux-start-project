@@ -20,8 +20,7 @@ module.exports = function (config) {
             test: /\.js$/,
             exclude: [
               path.resolve('src/'),
-              path.resolve('node_modules/'),
-              /.[sS]pec\.js$/
+              path.resolve('node_modules/')
             ],
             loader: 'babel'
           },
