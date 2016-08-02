@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test karma start karma.config.js",
+    "dev": "NODE_ENV=development webpack-dev-server ./webpack.config.js --port 9000",
     "lint": "eslint ."
   },
   "author": "",
