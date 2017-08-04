@@ -1,22 +1,34 @@
-React Redux Start Project
+# React Redux Start Project
 
-Includes:
+### Includes
 
-* webpack
-* eslint
-* babel
-* mocha
+  * React
+  * Redux
+  * Webpack
+  * Eslint
+  * Babel
+  * Karma
 
-Installing dependencies:
-  - npm install
+### Development setup
 
-Scripts:
+Install `yarn` as a dependency management for a faster and secure installation
 
-  Dev server:
-    - npm run dev
+    brew install yarn
 
-  Lint:
-    - npm run lint
+Install dependencies with `yarn`
 
-  Test:
-    - npm run test
+    yarn install
+
+### Scripts:
+
+Dev server
+
+    yarn dev
+
+Lint
+
+    yarn lint
+
+Test
+
+    yarn test
