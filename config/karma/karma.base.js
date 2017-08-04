@@ -6,10 +6,10 @@ module.exports = (config) => {
     singleRun: true,
     frameworks: ['jasmine', 'sinon-chai'],
     files: [
-      'tests.webpack.js'
+      '../../tests.webpack.js'
     ],
     preprocessors: {
-      'tests.webpack.js': ['webpack', 'sourcemap']
+      '../../tests.webpack.js': ['webpack', 'sourcemap']
     },
     reporters: ['mocha', 'osx', 'coverage'],
     webpack: {
@@ -44,7 +44,7 @@ module.exports = (config) => {
     },
     coverageReporter: {
       type: 'html',
-      dir: 'coverage/'
+      dir: '../../coverage/'
     }
   });
 };
