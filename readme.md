@@ -33,3 +33,7 @@ Lint
 Test
 
     yarn test
+
+Test with debug
+
+    yarn test:debug

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test karma start karma.config.js",
+    "test": "NODE_ENV=test karma start karma.base.js",
+    "test:debug": "NODE_ENV=test karma start karma.debug.js",
     "dev": "NODE_ENV=development webpack-dev-server ./webpack.config.js --port 9000 --hot --inline --watch --progress --display-reasons --display-modules --display-chunks --colors",
     "lint": "eslint ."
   },

@@ -4,7 +4,7 @@ module.exports = (config) => {
   config.set({
     browsers: ['PhantomJS'],
     singleRun: true,
-    frameworks: ['mocha', 'sinon-chai'],
+    frameworks: ['jasmine', 'sinon-chai'],
     files: [
       'tests.webpack.js'
     ],
@@ -14,6 +14,7 @@ module.exports = (config) => {
     },
     reporters: ['mocha', 'osx', 'coverage'],
     webpack: {
+      devtool: 'inline-source-map',
       module: {
         preLoaders: [
           {
@@ -30,6 +31,13 @@ module.exports = (config) => {
             loader: 'isparta'
           }
         ]
+      },
+      externals: {
+        cheerio: 'window',
+        'react/addons': true,
+        'react/lib/ExecutionEnvironment': true,
+        'react/lib/ReactContext': true,
+        'react-addons-test-utils': 'react-dom'
       }
     },
     webpackServer: {
