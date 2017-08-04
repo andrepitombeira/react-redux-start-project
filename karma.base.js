@@ -8,7 +8,6 @@ module.exports = (config) => {
     files: [
       'tests.webpack.js'
     ],
-
     preprocessors: {
       'tests.webpack.js': ['webpack', 'sourcemap']
     },
