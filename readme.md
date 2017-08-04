@@ -8,6 +8,7 @@
   * Eslint
   * Babel
   * Karma
+  * Enzyme
 
 ### Development setup
 
